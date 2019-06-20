@@ -1,0 +1,14 @@
+Antrenare pentru recunoastere de caractere.
+
+Imagine de input: 28x28 + padding 2 => 32x32
+
+Filtrele de convolutie -> 5x5
+
+La layerul fully conected - f(x*w + x1*w1 + ... + b), unde f - sigmoid sau tangenta hiperbolica (voi face aproximare liniara pe portiuni)
+
+SRate sau Stride = size filtru la max pooling -> daca e 1 fac maxim pe 1 pixel -> aceeasi dimensiune
+
+@cnn -> sim.m - > Functiile de S,C si F layers 
+
+
+Input: 
