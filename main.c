@@ -1,36 +1,33 @@
 #include "general_types.h"
+#include "cnn_decl.h"
 #include "conv.h"
-#include "img_decl.h"
-#include "sigmoid.h"
+#include "net.h"
 
 int main()
 {
-
-  //int row_img = sizeof(img) / sizeof(img[0]);
-  //int col_img = sizeof(img)/row_img;
-  //int row_filter = sizeof(filter) / sizeof(filter[0]);
-  //int col_filter = sizeof(filter)/row_filter;
-
-  //printf("Imgagine intiala: \n\n");
-  //for(int i=0;i<5;i++){for(int j=0;j<5;j++){printf("%d ", img[i][j]);}printf("\n");}
-  //printf("\n");
-
-  padWith2(img_test, img);
-
- // printf("Imgagine dupa padding: \n\n");
- // for(int i=0;i<32;i++){for(int j=0;j<32;j++){printf("%.0f  ", img[i][j]);}printf("\n");}
-  //printf("\n");
+    padWith2(InputImgUnpad, InputImg);
+	vDoNetC1(img);
+	vDoNetS1();
+ 
+ // printf("\n\nImagine convolutie: \n\n");
+  //conv(in, out, filters_S2[0], 1);
+ // printMatrix(out);
   
-  conv(img, filter, 1);
-
-  //printf("Imgagine dupa aplicare filtru convolutie: \n\n");
-  //conv(img_pad, filter , 1);
-
-	printf("SIGMOID\n"); 
-  printf("%.8f", sigmoid(4));
+ // printf("\n\nImagine max_pool: \n\n");
+  //maxPool(out, out_pool, 2);
+ // printMatrix(out_pool);
+ 
+ //
+  //float32 x;// = 4;
+  //float32 sig;// = sigmoid(x);
+  //printf("Sigmoid(%.2f) = %.8f", x, sig);
+  /*for(uint8 i = 0; i< 20; i++)
+  {
+	  printf("Dati numarul: ");
+	  scanf("%f", &x);
+	  sig = sigmoid(x);
+	  printf("\nSigmoid(%.2f) = %.8f\n\n", x, sig);
+  }*/
   
-  printf("Press ENTER key to Continue\n");  
-  getchar();
-
   return 0;
 }

@@ -1,0 +1,1 @@
+De verificat daca se pot aduna hartile inainde de aplicare filtru, nu dupa. 

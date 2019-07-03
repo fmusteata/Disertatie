@@ -1,3 +1,5 @@
+#ifndef GENERAL_TYPES_H
+#define GENERAL_TYPES_H
 
 #include <stdio.h>
 
@@ -10,14 +12,14 @@ typedef int sint32;
 typedef float float32;
 typedef long float64;
 
-#define IMG_ROW 32
-#define IMG_COL 32
+typedef struct myMatrix{
+	float32* data;
+	uint8 nr_row;
+	uint8 nr_col;
+}MatrixType;
 
-#define IMG_ROW_UNPAD (IMG_ROW - (FILTER_ROW - 1))
-#define IMG_COL_UNPAD (IMG_COL - (FILTER_COL - 1))
+#define GetMatrixElement(in, i, j)			(*(in.data + (i*in.nr_col) + j))
+#define SetMatrixElement(in, i, j, val)		(*(in.data + (i*in.nr_col) + j) = val)
 
-#define IMG_ROW1 5
-#define IMG_COL1 5
+#endif
 
-#define FILTER_ROW 5
-#define FILTER_COL 5

@@ -11,4 +11,3 @@ SRate sau Stride = size filtru la max pooling -> daca e 1 fac maxim pe 1 pixel -
 @cnn -> sim.m - > Functiile de S,C si F layers 
 
 
-Input: 
